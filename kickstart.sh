@@ -48,16 +48,28 @@ cp $INITDIR/.ssh/config ~/.ssh/config
 # Install all needed software
 echo "⚙️ Installing all needed software from brew and brew cask..."
 echo
-brew install python3 go node nvm kubernetes-cli tfenv jq awscli hey derailed/k9s/k9s
+brew update
 brew cask install firefox google-chrome visual-studio-code spectacle spotify intellij-idea postman docker gimp
+brew install python3 go node nvm kubernetes-cli tfenv jq awscli hey derailed/k9s/k9s
 
 # Install RVM
 echo "Installing Ruby Version Manager - RVM ..."
+echo "gem: --no-document" >> ~/.gemrc
 curl -sSL https://get.rvm.io | bash -s stable
+type rvm | head -1
 
 # Install SDK Man
 echo "Installing The Software Development Kit Manager - SDKMan ..."
 curl -s "https://get.sdkman.io" | bash
+
+# Setup dotfiles
+echo "🎫 Copying dotfiles..."
+echo
+echo "This step will:"
+echo " * Copy .zshrc to home"
+echo
+cp $INITDIR/.zshrc ~/
+source ~/.zshrc
 
 # Install VS Code extensions
 echo "Installing VS Code extensions..."
@@ -73,14 +85,9 @@ code --install-extension gabrielbb.vscode-lombok
 code --install-extension 42crunch.vscode-openapi
 echo
 
-# Setup dotfiles
-echo "🎫 Copying dotfiles..."
-echo
-echo "This step will:"
-echo " * Copy .zshrc to home"
-echo
-cp $INITDIR/.zshrc ~/
-source ~/.zshrc
+# Brew doctor to get an idea of the current state of the things
+echo "Brew doctor to get an idea of the current state of the things"
+brew doctor
 
 echo "🎉 All done!"
 echo
