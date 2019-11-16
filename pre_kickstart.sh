@@ -8,7 +8,7 @@ sleep 1
 INITDIR=$HOME/dev/projects/$USER/dotfiles
 
 # Install dev tools
-echo "🤓 Installing xcode CLI tools..."
+echo "🤓 Installing XCode CLI tools..."
 echo
 echo "This launches a GUI application and requires user confirmation."
 xcode-select --install
