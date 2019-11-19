@@ -50,7 +50,8 @@ echo "⚙️ Installing all needed software from brew and brew cask..."
 echo
 brew update
 brew cask install firefox google-chrome visual-studio-code spectacle spotify intellij-idea postman docker gimp
-brew install python3 go node nvm kubernetes-cli tfenv jq awscli hey derailed/k9s/k9s
+brew install python3 go node nvm minikube kubernetes-cli kubernetes-helm kubectx tfenv jq awscli hey derailed/k9s/k9s tree
+brew tap johanhaleby/kubetail && brew install kubetail
 
 # Install RVM
 echo "Installing Ruby Version Manager - RVM ..."
@@ -83,6 +84,7 @@ code --install-extension vscjava.vscode-spring-initializr
 code --install-extension pivotal.vscode-spring-boot
 code --install-extension gabrielbb.vscode-lombok
 code --install-extension 42crunch.vscode-openapi
+code --install-extension ms-kubernetes-tools.vscode-kubernetes-tools
 echo
 
 # Brew doctor to get an idea of the current state of the things

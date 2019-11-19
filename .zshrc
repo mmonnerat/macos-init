@@ -74,6 +74,7 @@ plugins=(
   git-flow
   docker
   kubectl
+  minikube
 )
 
 source $ZSH/oh-my-zsh.sh
