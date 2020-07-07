@@ -1,4 +1,4 @@
-#!/usr/local/bin/bash
+#!/bin/bash
 set -e
 
 echo "😍 Kick starting your machine..."

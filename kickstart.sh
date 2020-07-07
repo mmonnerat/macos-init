@@ -1,4 +1,4 @@
-#!/usr/local/bin/bash
+#!/bin/bash
 set -e
 
 echo "😍 Kick starting your machine..."
@@ -49,9 +49,10 @@ cp $INITDIR/.ssh/config ~/.ssh/config
 echo "⚙️ Installing all needed software from brew and brew cask..."
 echo
 brew update
-brew cask install firefox google-chrome visual-studio-code spectacle spotify intellij-idea postman docker gimp
-brew install python3 go node nvm minikube kubernetes-cli kubernetes-helm kubectx tfenv jq awscli hey derailed/k9s/k9s tree
-brew tap johanhaleby/kubetail && brew install kubetail
+brew cask install firefox google-chrome visual-studio-code spectacle spotify intellij-idea-ce postman docker
+brew install python3 redis go node nvm minikube kubernetes-cli kubernetes-helm tfenv jq awscli hey derailed/k9s/k9s tree
+brew install clojure/tools/clojure exercism ammonite-repl
+brew install vlc
 
 # Install RVM
 echo "Installing Ruby Version Manager - RVM ..."
@@ -79,12 +80,11 @@ code --install-extension ms-python.python
 code --install-extension visualstudioexptteam.vscodeintellicode
 code --install-extension redhat.vscode-yaml
 code --install-extension arjun.swagger-viewer
-code --install-extension mauve.terraform
 code --install-extension vscjava.vscode-spring-initializr
 code --install-extension pivotal.vscode-spring-boot
 code --install-extension gabrielbb.vscode-lombok
 code --install-extension 42crunch.vscode-openapi
-code --install-extension ms-kubernetes-tools.vscode-kubernetes-tools
+code --install-extension vscode:extension/betterthantomorrow.calva
 echo
 
 # Brew doctor to get an idea of the current state of the things
