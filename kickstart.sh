@@ -52,8 +52,7 @@ brew update
 brew cask install firefox google-chrome visual-studio-code intellij-idea-ce postman docker
 brew cask install bitwarden spectacle spotify
 brew install python3 go node nvm minikube kubernetes-cli kubernetes-helm tfenv jq awscli hey derailed/k9s/k9s tree
-brew install clojure/tools/clojure exercism ammonite-repl
-brew install vlc
+brew install clojure/tools/clojure bitwarden-cli exercism ammonite-repl vlc bitwarden-cli
 
 # Install RVM
 echo "Installing Ruby Version Manager - RVM ..."
