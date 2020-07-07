@@ -50,7 +50,7 @@ echo "⚙️ Installing all needed software from brew and brew cask..."
 echo
 brew update
 brew cask install firefox google-chrome visual-studio-code spectacle spotify intellij-idea-ce postman docker
-brew install python3 redis go node nvm minikube kubernetes-cli kubernetes-helm tfenv jq awscli hey derailed/k9s/k9s tree
+brew install python3 go node nvm minikube kubernetes-cli kubernetes-helm tfenv jq awscli hey derailed/k9s/k9s tree
 brew install clojure/tools/clojure exercism ammonite-repl
 brew install vlc
 
