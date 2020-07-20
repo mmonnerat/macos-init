@@ -52,7 +52,7 @@ brew update
 brew cask install firefox google-chrome visual-studio-code intellij-idea-ce postman docker
 brew cask install bitwarden spectacle spotify
 brew install python3 go node nvm minikube kubernetes-cli kubernetes-helm tfenv jq awscli hey derailed/k9s/k9s tree
-brew install clojure/tools/clojure bitwarden-cli exercism ammonite-repl vlc bitwarden-cli
+brew install clojure/tools/clojure bitwarden-cli exercism ammonite-repl vlc bitwarden-cli gpg
 
 # Install RVM
 echo "Installing Ruby Version Manager - RVM ..."
@@ -63,6 +63,9 @@ type rvm | head -1
 # Install SDK Man
 echo "Installing The Software Development Kit Manager - SDKMan ..."
 curl -s "https://get.sdkman.io" | bash
+
+# TODO copy .gitignore and set it up
+# git config --global core.excludesfile ~/.gitignore
 
 # Setup dotfiles
 echo "🎫 Copying dotfiles..."
@@ -84,7 +87,9 @@ code --install-extension vscjava.vscode-spring-initializr
 code --install-extension pivotal.vscode-spring-boot
 code --install-extension gabrielbb.vscode-lombok
 code --install-extension 42crunch.vscode-openapi
-code --install-extension vscode:extension/betterthantomorrow.calva
+code --install-extension aaron-bond.better-comments
+code --install-extension betterthantomorrow.calva
+code --install-extension borkdude.clj-kondo
 echo
 
 # Brew doctor to get an idea of the current state of the things
@@ -106,6 +111,9 @@ echo "  ⚙️  Add Google accounts, configure refreshing for every 5min"
 echo
 echo " 👓 Spectacle:"
 echo "  ⚙️  Preferences > Launch Spectacle at Login"
+echo
+echo " 📋 Clipy-App: Open-source clipboard manager"
+echo "  ⚙️  Download it at https://clipy-app.com/"
 echo
 echo " 🌕 Firefox:"
 echo "  ⚙️  Set as default browser"

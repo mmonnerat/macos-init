@@ -1,13 +1,13 @@
 # dotfiles
-The `pre_kickstart.sh` will install `XCode CLI`, `Homebrew`, `iTerm2` and finally `oh-my-zsh` as a pre-setup.
+The `pimp_term.sh` will install `XCode CLI`, `Homebrew`, `iTerm2` and finally `oh-my-zsh` as a pre-setup.
 Then, `kickstart.sh` will automates all the boring work of setting up a new personal machine by installing all software I use and pre-configuring (with the help of dotfiles and OSX hacks) otherwise tedious manual settings.
 
 ## Pre-requisites
 You need admin rights on the machine.
 
 ## Instructions
-* Download the `pre_kickstart.sh.sh` and make it executable with `chmod +x pre_kickstart.sh`
-* Run `./pre_kickstart.sh`
+* Download the `pimp_term.sh` and make it executable with `chmod +x pimp_term.sh`
+* Run `./pimp_term.sh`
 * Same dance for the `kickstart.sh` file
 * Download the `kickstart.sh.sh` and make it executable with `chmod +x kickstart.sh`
 * Run `./kickstart.sh`
