@@ -49,10 +49,11 @@ cp $INITDIR/.ssh/config ~/.ssh/config
 echo "⚙️ Installing all needed software from brew and brew cask..."
 echo
 brew update
-brew cask install firefox google-chrome visual-studio-code intellij-idea-ce postman docker
-brew cask install bitwarden spectacle spotify
-brew install python3 go node nvm minikube kubernetes-cli kubernetes-helm tfenv jq awscli hey derailed/k9s/k9s tree
-brew install clojure/tools/clojure bitwarden-cli exercism ammonite-repl vlc bitwarden-cli gpg
+brew install --cask firefox google-chrome intellij-idea-ce docker
+brew install --cask visual-studio-code insomnia obsidian
+brew install --cask bitwarden rectangle fzf spotify clipy
+brew install python3 pipenv go node nvm minikube kubernetes-cli jq awscli derailed/k9s/k9s tree
+brew install clojure/tools/clojure bitwarden-cli vlc gpg
 
 # Install RVM
 echo "Installing Ruby Version Manager - RVM ..."
@@ -66,6 +67,9 @@ curl -s "https://get.sdkman.io" | bash
 
 # TODO copy .gitignore and set it up
 # git config --global core.excludesfile ~/.gitignore
+
+# Clone Powerlevel10k ZSH theme
+git clone --depth=1 https://github.com/romkatv/powerlevel10k.git ${ZSH_CUSTOM:-$HOME/.oh-my-zsh/custom}/themes/powerlevel10k
 
 # Setup dotfiles
 echo "🎫 Copying dotfiles..."
@@ -109,11 +113,11 @@ echo "Application configuration to do manually:"
 echo " 📅 Calendar:"
 echo "  ⚙️  Add Google accounts, configure refreshing for every 5min"
 echo
-echo " 👓 Spectacle:"
-echo "  ⚙️  Preferences > Launch Spectacle at Login"
+echo " 👓 Rectangle:"
+echo "  ⚙️  System Preferences > Security & Privacy > Accessibility > Rectangle"
 echo
 echo " 📋 Clipy-App: Open-source clipboard manager"
-echo "  ⚙️  Download it at https://clipy-app.com/"
+echo "  ⚙️  System Preferences > Security & Privacy > Accessibility > Clipy"
 echo
 echo " 🌕 Firefox:"
 echo "  ⚙️  Set as default browser"

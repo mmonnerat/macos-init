@@ -15,7 +15,8 @@ export ZSH="/Users/$USER/.oh-my-zsh"
 # load a random theme each time oh-my-zsh is loaded, in which case,
 # to know which specific one was loaded, run: echo $RANDOM_THEME
 # See https://github.com/robbyrussell/oh-my-zsh/wiki/Themes
-ZSH_THEME="robbyrussell"
+# ZSH_THEME="robbyrussell"
+ZSH_THEME="powerlevel10k/powerlevel10k" # https://github.com/romkatv/powerlevel10k
 
 # Set list of themes to pick from when loading at random
 # Setting this variable when ZSH_THEME=random will cause zsh to load
@@ -71,13 +72,15 @@ ZSH_THEME="robbyrussell"
 # Add wisely, as too many plugins slow down shell startup.
 plugins=(
   git
-  git-flow
+  history
   docker
+  lein
   kubectl
   minikube
 )
 
 source $ZSH/oh-my-zsh.sh
+source ~/.p10k.zsh
 
 # User configuration
 
@@ -108,6 +111,12 @@ export MANPATH="/usr/local/man:$MANPATH"
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 
+# Aliases
+alias ff="/Applications/Firefox.app/Contents/MacOS/firefox --new-tab --url"
+
+# ----------- GPG -----------
+export GPG_TTY=$(tty)
+
 # ----------- Brew -----------
 if type brew &>/dev/null; then
   FPATH=$(brew --prefix)/share/zsh/site-functions:$FPATH
@@ -135,4 +144,6 @@ export SDKMAN_DIR="/Users/cesarcneto/.sdkman"
 # uninstall by removing these lines or running `tabtab uninstall slss`
 [[ -f /Users/cesarcneto/.nvm/versions/node/v10.15.3/lib/node_modules/serverless/node_modules/tabtab/.completions/slss.zsh ]] && . /Users/cesarcneto/.nvm/versions/node/v10.15.3/lib/node_modules/serverless/node_modules/tabtab/.completions/slss.zsh
 # Add RVM to PATH for scripting. Make sure this is the last PATH variable change.
-export PATH="$PATH:$HOME/.rvm/bin"
+PATH="$PATH:$HOME/.rvm/bin"
+
+export PATH
