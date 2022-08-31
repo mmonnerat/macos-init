@@ -1,4 +1,4 @@
-# dotfiles
+# macos-init
 The `pimp_term.sh` will install `XCode CLI`, `Homebrew`, `iTerm2` and finally `oh-my-zsh` as a pre-setup.
 Then, `kickstart.sh` will automates all the boring work of setting up a new personal machine by installing all software I use and pre-configuring (with the help of dotfiles and OSX hacks) otherwise tedious manual settings.
 
