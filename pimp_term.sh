@@ -5,8 +5,6 @@ echo "😍 Kick starting your machine..."
 echo
 sleep 1
 
-INITDIR=$HOME/dev/projects/$USER/dotfiles
-
 # Install dev tools
 echo "🤓 Installing XCode CLI tools..."
 echo

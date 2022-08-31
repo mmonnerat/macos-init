@@ -5,7 +5,8 @@ echo "😍 Kick starting your machine..."
 echo
 sleep 2
 
-INITDIR=$HOME/dev/projects/$USER/dotfiles
+INITDIR=$HOME/dev/projects/$USER/macos-init
+
 # OSX Tweaks
 echo "🖱 Setting up OSX tweaks..."
 echo
@@ -42,7 +43,7 @@ echo
 echo "🐛 Creating workspace and cloning general init project..."
 echo
 mkdir -p ~/dev/projects/$USER
-git clone git@github.com:cesarcneto/dotfiles.git $INITDIR
+git clone git@github.com:cesarcneto/macos-init.git $INITDIR
 cp $INITDIR/.ssh/config ~/.ssh/config
 
 # Install all needed software
