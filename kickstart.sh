@@ -43,18 +43,16 @@ echo
 echo "🐛 Creating workspace and cloning general init project..."
 echo
 mkdir -p ~/dev/projects/$USER
-git clone git@github.com:cesarcneto/macos-init.git $INITDIR
+git clone git@github.com:mmonnerat/macos-init.git $INITDIR
 cp $INITDIR/.ssh/config ~/.ssh/config
 
 # Install all needed software
 echo "⚙️ Installing all needed software from brew and brew cask..."
 echo
 brew update
-brew install --cask firefox google-chrome intellij-idea-ce docker
 brew install --cask visual-studio-code insomnia obsidian
 brew install --cask bitwarden rectangle fzf spotify clipy
 brew install python3 pipenv go node nvm minikube kubernetes-cli jq awscli derailed/k9s/k9s tree
-brew install clojure/tools/clojure bitwarden-cli vlc gpg
 
 # Install RVM
 echo "Installing Ruby Version Manager - RVM ..."
