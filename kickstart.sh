@@ -50,8 +50,10 @@ cp $INITDIR/.ssh/config ~/.ssh/config
 echo "⚙️ Installing all needed software from brew and brew cask..."
 echo
 brew update
-brew install --cask visual-studio-code insomnia obsidian
-brew install --cask bitwarden rectangle fzf spotify clipy
+brew install --cask visual-studio-code
+brew install --cask insomnia
+brew install --cask rectangle 
+brew install --cask clipy
 brew install python3 pipenv go node nvm minikube kubernetes-cli jq awscli derailed/k9s/k9s tree
 
 # Install RVM
@@ -78,22 +80,6 @@ echo " * Copy .zshrc to home"
 echo
 cp $INITDIR/.zshrc ~/
 source ~/.zshrc
-
-# Install VS Code extensions
-echo "Installing VS Code extensions..."
-code --install-extension vscjava.vscode-java-pack
-code --install-extension ms-python.python
-code --install-extension visualstudioexptteam.vscodeintellicode
-code --install-extension redhat.vscode-yaml
-code --install-extension arjun.swagger-viewer
-code --install-extension vscjava.vscode-spring-initializr
-code --install-extension pivotal.vscode-spring-boot
-code --install-extension gabrielbb.vscode-lombok
-code --install-extension 42crunch.vscode-openapi
-code --install-extension aaron-bond.better-comments
-code --install-extension betterthantomorrow.calva
-code --install-extension borkdude.clj-kondo
-echo
 
 # Brew doctor to get an idea of the current state of the things
 echo "Brew doctor to get an idea of the current state of the things"
